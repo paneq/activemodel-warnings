@@ -5,9 +5,7 @@ class WarningsTest < ActiveSupport::TestCase
 
   class TestMe < Struct.new(:one, :two, :three)
     include ActiveModel::Validations
-    extend  ActiveModel::Warnings
-
-    attr_accessor :skip_warnings
+    include ActiveModel::Warnings
 
     validates_presence_of :one
     validates_presence_of :two, :warning => true
