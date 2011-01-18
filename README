@@ -1,0 +1,15 @@
+You have three ways of activating the gem:
+
+Use
+require 'activemodel-warnings'
+to have attr_accessor :skip_warnings.
+
+Use
+require 'activemodel-warnings/boolean'
+if you want the attribute of skip_warning=(attribute) method to be parsed with global Boolean() method
+ex. provided with GlobalBoolean.kernel!
+
+Use
+require 'activemodel-warnings/global_boolean'
+if you want the attribute of skip_warnings=(attribute) to be parsed with GlobalBoolean.Boolean() method
+ex. provided by global_boolean gam but without executing GlobalBoolean.kernel!
