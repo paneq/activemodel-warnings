@@ -7,6 +7,8 @@ class WarningsTest < ActiveSupport::TestCase
     include ActiveModel::Validations
     extend  ActiveModel::Warnings
 
+    attr_accessor :skip_warnings
+
     validates_presence_of :one
     validates_presence_of :two, :warning => true
     warnings do
@@ -36,7 +38,7 @@ class WarningsTest < ActiveSupport::TestCase
     @valid.valid?
 
     @invalid.skip_warnings = true
-    @invalid.errors.expects(:add).with(:one, :blank)
+    @invalid.errors.expects(:add).with(:one, :blank, anything)
     @invalid.valid?
   end
 

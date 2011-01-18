@@ -10,8 +10,18 @@ module ActiveModel
     end
 
     def validate(*args, &block)
+      options = args.extract_options!
+      if options[:warning] || @warnings_block
+        options = options.dup
+        options[:if] = Array.wrap(options[:if])
+        options[:if] << "skip_warnings != true"
+      end
+      args << options
+
+
       super
     end
 
   end
+  
 end
