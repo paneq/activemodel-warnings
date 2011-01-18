@@ -24,9 +24,9 @@ class WarningsTest < ActiveSupport::TestCase
     @valid.errors.expects(:add).never
     @valid.valid?
 
-    @invalid.errors.expects(:add).with(:one, :blank)
-    @invalid.errors.expects(:add).with(:two, :blank)
-    @invalid.errors.expects(:add).with(:three, :blank)
+    @invalid.errors.expects(:add).with(:one, :blank, anything)
+    @invalid.errors.expects(:add).with(:two, :blank, anything)
+    @invalid.errors.expects(:add).with(:three, :blank, anything)
     @invalid.valid?
   end
 
