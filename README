@@ -13,3 +13,7 @@ Use
 require 'activemodel-warnings/global_boolean'
 if you want the attribute of skip_warnings=(attribute) to be parsed with GlobalBoolean.Boolean() method
 ex. provided by global_boolean gam but without executing GlobalBoolean.kernel!
+
+
+Be sure to require global_boolean before require of this gem.
+If using bundler then just put the declaration of global_boolean in Gemfile above activemodel-warnings
