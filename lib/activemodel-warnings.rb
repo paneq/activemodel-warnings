@@ -11,6 +11,7 @@ module ActiveModel
     end
 
     module ClassMethods
+      
       def warnings()
         @warnings_block = true
         yield
@@ -20,8 +21,10 @@ module ActiveModel
 
       def validate(*args, &block)
         options = args.extract_options!
+        
         if options[:warning] || @warnings_block
           options = options.dup
+          options[:warning] ||= @warnings_block
           options[:if] = Array.wrap(options[:if])
           options[:if] << "skip_warnings != true"
         end
@@ -29,9 +32,20 @@ module ActiveModel
 
         super
       end
-      
-    end
 
-  end
+      def validates_with(*args, &block)
+        options = args.extract_options!
+
+        if options[:warning] || @warnings_block
+          options = options.dup
+          options[:warning] ||= @warnings_block
+        end
+        args << options
+        super
+      end
+
+    end # ClassMethods
   
-end
+  end # Warnings
+
+end # ActiveModel

@@ -40,4 +40,11 @@ class WarningsTest < ActiveSupport::TestCase
     @invalid.valid?
   end
 
+  test "validator recives the warning option" do
+    assert ! TestMe.validators_on(:one).first.options[:warning]
+    assert TestMe.validators_on(:two).first.options[:warning]
+    assert TestMe.validators_on(:three).first.options[:warning]
+  end
+
+
 end

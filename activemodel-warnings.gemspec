@@ -18,8 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "activemodel", "~> 3.0.3"
   
-  s.add_development_dependency "bundler", "= 1.0.7" # Strict because we are overwriting some of its methods
-  s.add_development_dependency "gavdi-acolyte", "= 0.1.2"
+  s.add_development_dependency "bundler", "~> 1.0.7"
   s.add_development_dependency "mocha"
 
   # s.add_optional_dependency "global_boolean", "~> 0.1.1" # There is no such thing as add_optional_dependency. Just to notify the users
