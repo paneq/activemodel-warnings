@@ -1,0 +1,26 @@
+PATH
+  remote: .
+  specs:
+    activemodel-warnings (1.0.1)
+      activemodel (~> 3.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activemodel (3.0.4)
+      activesupport (= 3.0.4)
+      builder (~> 2.1.2)
+      i18n (~> 0.4)
+    activesupport (3.0.4)
+    builder (2.1.2)
+    i18n (0.5.0)
+    mocha (0.9.12)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activemodel (~> 3.0)
+  activemodel-warnings!
+  bundler (~> 1.0.7)
+  mocha

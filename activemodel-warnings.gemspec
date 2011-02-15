@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "activemodel-warnings"
   s.version     = ActiveModel::Warnings::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Robert Pankowecki (Gavdi Pollska)"]
+  s.authors     = ["Robert Pankowecki (Gavdi Polska)"]
   s.email       = ["robert.pankowecki@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Mark some validations as warnings and let them be easily skipped}
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project         = "global_boolean"
 
-  s.add_dependency "activemodel", "~> 3.0.3"
+  s.add_dependency "activemodel", "~> 3.0"
   
   s.add_development_dependency "bundler", "~> 1.0.7"
   s.add_development_dependency "mocha"
