@@ -1,7 +1,8 @@
 load File.join(File.dirname(__FILE__), 'test_helper.rb')
 
-
 class WarningsTest < ActiveSupport::TestCase
+
+  include ::Minitest::Instrument::Notifications
 
   class TestMe < Struct.new(:one, :two, :three)
     include ActiveModel::Validations

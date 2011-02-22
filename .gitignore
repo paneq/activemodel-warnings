@@ -2,3 +2,4 @@ pkg/*
 *.gem
 .bundle
 nbproject
+minitest-instrument-db.sqlite3
