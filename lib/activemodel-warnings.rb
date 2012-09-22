@@ -5,13 +5,13 @@ module ActiveModel
   module Warnings
 
     attr_accessor :skip_warnings
-    
+
     def self.included(klass)
       klass.extend(ClassMethods)
     end
 
     module ClassMethods
-      
+
       def warnings()
         @warnings_block = true
         yield
@@ -21,7 +21,7 @@ module ActiveModel
 
       def validate(*args, &block)
         options = args.extract_options!
-        
+
         if options[:warning] || @warnings_block
           options = options.dup
           options[:warning] ||= @warnings_block
@@ -45,7 +45,7 @@ module ActiveModel
       end
 
     end # ClassMethods
-  
+
   end # Warnings
 
 end # ActiveModel

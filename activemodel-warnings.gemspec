@@ -13,17 +13,10 @@ Gem::Specification.new do |s|
   s.description = %q{Mark some validations as warnings and let them be easily skipped}
 
   s.required_rubygems_version = ">= 1.3.6"
-
   s.rubyforge_project         = "global_boolean"
-
   s.add_dependency "activemodel", "~> 3.0"
-  
-  s.add_development_dependency "bundler", "~> 1.0.7"
   s.add_development_dependency "mocha"
-
-  # s.add_optional_dependency "global_boolean", "~> 0.1.1" # There is no such thing as add_optional_dependency. Just to notify the users
-  # Read http://yehudakatz.com/2010/04/17/ruby-require-order-problems/
-  # Read README file to learn about how to use the gem with or without global_boolean support
+  s.add_development_dependency "rake"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
