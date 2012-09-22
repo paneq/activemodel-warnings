@@ -1,6 +1,4 @@
 pkg/*
 *.gem
 .bundle
-nbproject
-minitest-instrument-db.sqlite3
-test/instrument/database.yml
+Gemfile.lock
