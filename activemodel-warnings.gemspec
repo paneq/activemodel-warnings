@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.description = %q{Mark some validations as warnings and let them be easily skipped}
 
   s.required_rubygems_version = ">= 1.3.6"
-  s.rubyforge_project         = "global_boolean"
+  s.rubyforge_project         = "activemodel-warnings"
   s.add_dependency "activemodel", "~> 3.0"
-  s.add_development_dependency "mocha"
   s.add_development_dependency "rake"
+  s.add_development_dependency "mocha"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
