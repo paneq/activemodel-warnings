@@ -34,7 +34,7 @@ Usage
 Add `warning: true` option to your validation:
 
 ```ruby
-validates_presence_of :telephone, :warning => true
+validates_presence_of :telephone, warning: true
 ```
 
 Or define skippable validations in `warnings` block:
@@ -73,7 +73,7 @@ Workflow
 2. User clicks `save` button
 3. Optional validation does not pass
 4. Form is rendered and displays warnings
-5. User fixes/fills some values or click the checkbox "skip warnings"
+5. User fixes/fills some values or clicks the checkbox "skip warnings"
 6. Validations passes and object is saved
 7. Win!
 
