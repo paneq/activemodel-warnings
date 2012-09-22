@@ -1,6 +1,9 @@
 activemodel-warnings
 ====================
 
+[![Build Status](https://secure.travis-ci.org/paneq/activemodel-warnings.png?branch=master&.png)](http://travis-ci.org/paneq/activemodel-warnings)
+[![Dependency Status](https://gemnasium.com/paneq/activemodel-warnings.png)](https://gemnasium.com/paneq/activemodel-warnings)
+
 Description
 -----------
 
