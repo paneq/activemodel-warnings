@@ -10,3 +10,4 @@ gemfile:
   - Gemfile.rails-3.0.x
   - Gemfile.rails-3.1.x
   - Gemfile.rails-3.2.x
+  - Gemfile.rails-4.0.x
